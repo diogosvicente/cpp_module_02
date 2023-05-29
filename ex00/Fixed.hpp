@@ -3,12 +3,13 @@
 
 # include <iostream>
 
-const std::string RED    = "\033[31m";
-const std::string ULINE  = "\033[4m";
-const std::string RESET  = "\033[0m";
-const std::string GREEN  = "\033[32m";
-const std::string BOLD	 = "\033[1m";
-const std::string ITALIC = "\033[3m";
+# define RED	"\033[31m"
+# define ULINE	"\033[4m"
+# define RESET	"\033[0m"
+# define GREEN	"\033[32m"
+# define YELLOW	"\033[33m"
+# define BOLD	"\033[1m"
+# define ITALIC	"\033[3m"
 
 /**
  *	Orthodox Canonical Form Class
@@ -31,11 +32,13 @@ class	Fixed
 	public:
 		/* 1 */ Fixed(void);
 		/* 2 */ Fixed(Fixed const &copy);
-		/* 3 */ Fixed &operator=(Fixed const &copy);
+		/* 3 */ Fixed &operator=(Fixed const &otherValue);
 		/* 4 */ ~Fixed(void);
-		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
+		/* 5 */	int		getRawBits(void) const;
+		/* 6 */	void	setRawBits(int const raw);
 };
+
+void	codeline(std::string s);
 
 #endif
 
