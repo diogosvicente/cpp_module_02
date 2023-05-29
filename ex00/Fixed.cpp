@@ -40,8 +40,6 @@ Fixed & Fixed::operator=(const Fixed & otherValue)
 	return (*this);
 }
 
-
-
 Fixed::~Fixed(void)
 {
 	std::cout << RED << "(4)	Destructor called" << RESET << std::endl; 
