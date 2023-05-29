@@ -2,13 +2,12 @@
 
 int main(void)
 {
-	Fixed a;
-	Fixed b(a);
-	Fixed c;
-	c = a;
+	int intValue = 5;
+    Fixed a(intValue);
 
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-    return (0);
+    // Acessar o valor em ponto fixo
+    int rawValue = a.getRawBits();
+
+    std::cout << "Valor em ponto fixo: " << rawValue << std::endl;
+
 }

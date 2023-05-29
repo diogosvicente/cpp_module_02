@@ -35,3 +35,23 @@ void	Fixed::setRawBits(const int raw)
 {
 	this->_fixedValue = raw;
 }
+
+Fixed::Fixed(const int intValue) : _fixedValue(intValue << this->_fractionalBits)
+{
+	std::cout << "Int constructor called" << std::endl;
+}
+
+Fixed::Fixed(const float floatValue) : _fixedValue(static_cast<int>(roundf(floatValue * (1 << this->_fractionalBits))))
+{
+	std::cout << "Float constructor called" << std::endl;
+}
+
+float Fixed::toFloat(void) const
+{
+	return (static_cast<float>(this->_fixedValue) / (1 << this->_fractionalBits));
+}
+
+int Fixed::toInt(void) const
+{
+	return (this->_fixedValue >> this->_fractionalBits);
+}

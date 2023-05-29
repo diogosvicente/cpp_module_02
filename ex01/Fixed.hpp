@@ -2,6 +2,7 @@
 # define FIXED_HPP
 
 # include <iostream>
+# include <cmath>
 
 # define RED	"\033[31m"
 # define ULINE	"\033[4m"
@@ -23,8 +24,11 @@ class	Fixed
 		~Fixed(void);
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
+
+		Fixed(const int intValue);
+		Fixed(const float floatValue);
+		int		toInt(void) const;
+		float	toFloat(void) const;
 };
 
 #endif
-
-
