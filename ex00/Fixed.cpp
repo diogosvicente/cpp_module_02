@@ -1,10 +1,8 @@
 #include "Fixed.hpp"
 
-const int	Fixed::_fractionalBits = 8;
-
 Fixed::Fixed(void): _fixedValue(0)
 {
-	std::cout << "(1)	Default constructor: " << this->_fixedValue << RESET << std::endl; 
+	std::cout << "(1)	Default constructor: " << this->_fixedValue << RESET << std::endl;
 }
 
 Fixed::Fixed(Fixed const & copy)

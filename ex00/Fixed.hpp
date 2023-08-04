@@ -41,5 +41,3 @@ class	Fixed
 void	codeline(std::string s);
 
 #endif
-
-
