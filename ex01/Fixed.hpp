@@ -15,12 +15,12 @@
 class	Fixed
 {
 	private:
-		int					_fixedValue;
-		static const int	_fractionalBits ;
+		int					_fixedPoint;
+		static int const	_fractionalBits = 8;
 	public:
 		Fixed(void);
-		Fixed(Fixed const &copy);
-		Fixed &operator=(Fixed const &otherValue);
+		Fixed(const Fixed &copy);
+		Fixed &operator=(Fixed const &copy);
 		~Fixed(void);
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
@@ -30,5 +30,7 @@ class	Fixed
 		int		toInt(void) const;
 		float	toFloat(void) const;
 };
+
+std::ostream	&operator<<(std::ostream &str, Fixed const &fixed_nbr);
 
 #endif
